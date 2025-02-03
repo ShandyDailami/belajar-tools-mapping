@@ -11,7 +11,7 @@
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <style>
     #map {
-      height: 180px;
+      height: 100vh;
     }
   </style>
 
@@ -20,11 +20,17 @@
 <body>
   <div id="map"></div>
   <script>
-    var map = L.map('map').setView([51.505, -0.09], 13);
+    var map = L.map('map').setView([-3.445934, 114.84082], 100);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
+    L.marker([-3.445934, 114.84082]).addTo(map)
+      .bindPopup('Ini adalah ft depan lab sipil')
+      .openPopup();
+    L.marker([-3.445224, 114.840959]).addTo(map)
+      .bindPopup('Ini adalah ft depan lab sipil')
+      .openPopup();
   </script>
 </body>
 
